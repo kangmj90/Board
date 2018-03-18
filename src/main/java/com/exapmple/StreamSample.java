@@ -1,11 +1,13 @@
 package com.exapmple;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by kangminjeong on 2018. 3. 18..
@@ -15,8 +17,6 @@ public class StreamSample {
     public static void main(String[] args) {
 
         final List<Data> data = new ArrayList<>();
-        data.add(new Data(1L, "서울", 1, 1000L));
-
 
         System.out.println("--------------------------------------------------");
         // 1. numbers sum
@@ -50,7 +50,8 @@ public class StreamSample {
     @AllArgsConstructor
     @EqualsAndHashCode(of = "id")
     @ToString
-    public stataic class Data {
+    @lombok.Data
+    public class Data {
         private Long id;
         private String name;
         private int type;

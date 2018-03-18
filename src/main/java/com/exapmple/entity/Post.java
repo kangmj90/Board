@@ -13,7 +13,8 @@ import lombok.ToString;
 public class Post {
 
     private Long id;
-    private String name;
+    private String title;
+    private String content;
     private Long board_id;
     private Long user_id;
     private boolean report;
